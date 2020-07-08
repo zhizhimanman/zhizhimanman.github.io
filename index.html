@@ -62,7 +62,7 @@
     <div class="img-wrap">
 
     </div>
-    <audio src="动态星空.mp3" autoplay="autoplay"></audio>
+    <audio src="动态星空.mp3" class="music" autoplay="autoplay"></audio>
     <script>
         $(document).ready(function() {
             var stars = 800; /*星星的密集程度，数字越大越多*/
@@ -83,8 +83,16 @@
 
                 })
             })
-            document.addEventListener("WeixinJSBridgeReady", function () {
-            globalAudio.play();
+             $('.music').on('click', function() {
+            if (play) {
+                $('#audio_play')[0].pause();
+                $(this).removeClass('rotate');
+                play = false;
+            } else {
+                $('#audio_play')[0].play();
+                $(this).addClass('rotate');
+                play = true;
+            }
             });
             document.body.addEventListener('touchmove', function(e) {
             e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
