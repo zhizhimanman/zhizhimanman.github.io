@@ -73,7 +73,6 @@
             var r = 800; /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
             for (var i = 0; i < stars; i++) {
                 var $star = $("<div/>").addClass("star");
-                console.log($star)
                 $stars.append($star);
             }
             $(".star").each(function () {
@@ -86,17 +85,6 @@
 
                 })
             })
-            // $('.music').on('click', function () {
-            //     if (play) {
-            //         $('#audio_play')[0].pause();
-            //         $(this).removeClass('rotate');
-            //         play = false;
-            //     } else {
-            //         $('#audio_play')[0].play();
-            //         $(this).addClass('rotate');
-            //         play = true;
-            //     }
-            // });
             document.body.addEventListener('touchmove', function (e) {
                 e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
             }, {
@@ -109,7 +97,6 @@
             })
         })
     </script>
-
 
 </body>
 
