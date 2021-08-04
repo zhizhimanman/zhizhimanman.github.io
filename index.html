@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="favicon.ico">
-    <title>想握住此生辽阔，赠你满天星火。     </title>
+    <title>想握住此生辽阔，赠你漫天星火。</title>
     <script src="jquery.mini.js"></script>
     <style>
         body {
@@ -66,7 +66,10 @@
     <div class="img-wrap">
 
     </div>
-    <audio src="动态星空.mp3" class="music" autoplay="autoplay"></audio>
+    <audio class="music" autoplay="autoplay">
+        <source src="所念皆星河.mp3" />
+        <source src="动态星空.mp3" />
+    </audio>
     <script>
         $(document).ready(function () {
             var stars = 1400; /*星星的密集程度，数字越大越多*/
@@ -103,7 +106,7 @@
             clearTimeout(timerID);  //清除定时器
             document.title = text.substring(1, text.length) + text.substring(0, 1); //substring()方法用于提取字符创中介于两个指定下标之间的字符
             text = document.title.substring(0, text.length);
-            timerID = setTimeout("newtext()", 600)
+            timerID = setTimeout("newtext()", 1000)
         }
     </script>
 
