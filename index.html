@@ -71,6 +71,9 @@
         <source src="动态星空.mp3" />
     </audio>
     <script>
+          /*
+          *** 原来对我来说，你比星星更遥不可及。
+        */
         $(document).ready(function () {
             var stars = 1400; /*星星的密集程度，数字越大越多*/
             var $stars = $(".stars");
@@ -90,7 +93,7 @@
                 })
             })
             document.body.addEventListener('touchmove', function (e) {
-                e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                e.preventDefault();
             }, {
                 passive: false
             });
@@ -100,11 +103,11 @@
                 music.play()
             })
         })
-        var text = document.title;  //定义文章的title
-        var timerID;    //定义时间变量
-        function newtext() {    //定义函数
-            clearTimeout(timerID);  //清除定时器
-            document.title = text.substring(1, text.length) + text.substring(0, 1); //substring()方法用于提取字符创中介于两个指定下标之间的字符
+        var text = document.title;
+        var timerID;
+        function newtext() {
+            clearTimeout(timerID);
+            document.title = text.substring(1, text.length) + text.substring(0, 1);
             text = document.title.substring(0, text.length);
             timerID = setTimeout("newtext()", 1000)
         }
